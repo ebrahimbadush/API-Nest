@@ -1,0 +1,4 @@
+/* Home component styles */
+:host {
+  display: block;
+}

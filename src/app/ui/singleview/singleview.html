@@ -1,0 +1,17 @@
+<div class="container">
+    <div [hidden]="!loading">Loading product...</div>
+    <div class="error" [hidden]="!error">Error: {{ error }}</div>
+
+    <!-- Show card when we have a product (from state, localStorage, or API) -->
+    <div class="card" [hidden]="!singleproduct">
+        <div class="meta">Product id: {{ productId || singleproduct?.id }}</div>
+        <img [src]="singleproduct?.image || singleproduct?.image?.url" alt="product image" class="product-img" height="200" width="200" />
+        <div>
+            <h2>{{ singleproduct?.title }}</h2>
+            <p>{{ singleproduct?.price }}</p>
+            <p>{{ singleproduct?.description }}</p>
+        </div>
+    </div>
+
+    <pre *ngIf="singleproductJson" class="debug">{{ singleproductJson }}</pre>
+</div>

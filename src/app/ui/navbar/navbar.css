@@ -1,0 +1,21 @@
+/* Consistent margins and alignment for navbar component */
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo sizing and alignment for navbar */
+.navbar-logo {
+	height: 42px;
+	width: auto;
+	object-fit: contain;
+	display: inline-block;
+}
+
+@media (max-width: 576px) {
+	.navbar-logo {
+		height: 34px;
+	}
+}
+

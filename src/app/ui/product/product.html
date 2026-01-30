@@ -1,0 +1,14 @@
+<h1>Our Products</h1>
+<div class="card-group">
+ @for (item of products; track item.id) 
+ {
+ <div class="card">
+    <img src="{{item.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">{{item.price}}</p>
+  <a href="#" (click)="goToSingle(item); $event.preventDefault()">Goto</a>
+    </div>
+
+  </div>
+ }
